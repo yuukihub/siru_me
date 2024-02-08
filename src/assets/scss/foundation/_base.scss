@@ -1,0 +1,37 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  background: map_get($color,bg);
+}
+
+body * {
+  box-sizing: border-box;
+  transition: 0.1s;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  letter-spacing: 1px;
+  font-family: 'Sawarabi Gothic', sans-serif;
+  color: map_get($color,text01);
+}
+
+a {
+  color: map_get($color, link);
+  text-decoration: none;
+}
+
+
+input,textarea {
+  @include placeholder(white);
+}
+
+input:focus::placeholder {
+  color: transparent;
+  transition: 0.5s;
+}
+
+

@@ -1,0 +1,43 @@
+@keyframes fadeInSlide {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 0.4;
+  }
+}
+
+
+@keyframes fadeInSlideMv {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-200px);
+    opacity: 0.4;
+  }
+}
+
+
+/**
+* 画面遷移時の演出
+*/
+.router-transition-enter-active {
+  animation: fadeInSlide 1s;
+  opacity: 0;
+}
+
+
+/**
+ *
+ *  メインジュアル表示時のパターンの演出
+ */
+.fadeInSlide {
+  animation: fadeInSlideMv 1s;
+  opacity: 0;
+}
+
+

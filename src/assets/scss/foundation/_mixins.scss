@@ -1,0 +1,56 @@
+// mixin設定
+
+
+@mixin mq($level: pc) {
+  @if $level == pc {
+    @media  (min-width: 768px){
+      @content;
+    }
+  } @else if $level == xsmall {
+    @media  (max-width: 374px){
+      @content;
+    }
+  } @else {
+    @media  (max-width: 767px){
+      @content;
+    }
+  }
+}
+
+// resetForm
+@mixin placeholder($color) {
+  &::placeholder {
+    color: $color;
+  }
+
+  // IE
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+
+  // Edge
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+
+@mixin hoverButton() {
+  &:hover {
+    top: -2px;
+    left: -2px;
+    transition: top 0.1s ease-out, left 0.1s ease-out;
+    @include mq(sp) {
+      top: -5px;
+      left: -5px;
+    }
+  }
+}
+
+@mixin hover01() {
+  &:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+  }
+}
+

@@ -1,0 +1,73 @@
+@import './foundation/include';
+@import './foundation/reset';
+@import './foundation/base';
+@import 'object/component/animation';
+@import './object/utility/margin';
+@import './object/utility/text';
+
+
+.is-pc {
+  display: block;
+  @include mq(sp) {
+    display: none;
+  }
+}
+
+.is-sp {
+  display: none;
+  @include mq(sp) {
+    display: block;
+  }
+}
+
+
+body,
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.inner {
+  max-width: 750px;
+  width: 100%;
+  margin: auto;
+  @include mq(sp) {
+    padding: 40px 2%;
+  }
+}
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.flex {
+  display: flex;
+}
+.bg {
+  background: map_get($color, main01);
+  padding: 100px 0;
+  @include mq(sp) {
+    padding: 50px 0;
+  }
+  &02 {
+    background: url(../../../public/img/common/minivan_shindan_bg.gif);
+    background-attachment: fixed;
+  }
+}
+.section {
+  padding: 100px 0;
+  @include mq(sp) {
+    padding: 50px 0;
+  }
+  &--under {
+    .c-heading02 {
+      padding: 100px 0;
+      @include mq(sp) {
+        padding: 20px 0;
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,40 @@
+// PATH
+$image_path: "/img/";
+
+// COLOR
+$color: (
+ main01: linear-gradient(135deg, #d62547 35%, #ff720b 100%),
+ main02: #d62547,
+  sub01: #008ab2,
+ link: #0099ff,
+ gray: #f4f4f4,
+ text01: #333333,
+ error: #f2324d,
+);
+
+$letterSpace: (
+ default: 2px,
+);
+
+$fontSize: (
+  default: 1.1em,
+);
+
+$fontFamily: (
+  FontAwesome: "FontAwesome",
+  Montserrat: "Montserrat",
+);
+
+// z-index
+// 基本的に normal もしくは z-index:1を利用
+// 1以上の値が必要な場合はこちらで定義
+$z-map: (
+  normal,
+  pageTop,
+  drop,
+  header,
+  menu,
+  modal__overlay,
+  modal,
+);
+
